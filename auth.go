@@ -124,7 +124,7 @@ type AuthConfig struct {
 	CookieHttpOnly        bool
 	LoginRedirect         string
 	LoginSuccessRedirect  string
-	
+  LoginRedirectHttps    bool
 }
 
 // Config is the default implementation of Config, and is used by
@@ -137,6 +137,7 @@ var Config = &AuthConfig{
 	CookieHttpOnly:        true,
 	LoginRedirect:         "/auth/login",
 	LoginSuccessRedirect:  "/",
+  LoginRedirectHttps:    false,
 }
 
 // Passes back the OAuth Token. This will likely be the oauth2.Token or the
